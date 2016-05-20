@@ -2,8 +2,8 @@ var express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
 
-//var BASE_URL = 'https://deleteit.herokuapp.com/';
-var BASE_URL = 'http://lol-flosfad.c9users.io/';
+var BASE_URL = 'https://delit.herokuapp.com/';
+//var BASE_URL = 'http://lol-flosfad.c9users.io/';
 function randomStr(s) {
     return Math.round((Math.pow(36, s + 1) - Math.random() * Math.pow(36, s))).toString(36).slice(1);
 }
