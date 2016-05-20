@@ -1,0 +1,23 @@
+{
+  "name": "del",
+  "version": "1.0.0",
+  "description": "Self Destructing Messages",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "KingPixil/del"
+  },
+  "author": "Kabir Shah",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}
