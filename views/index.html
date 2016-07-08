@@ -13,12 +13,13 @@
 </head>
 <body>
 	<div class="centered text-center">
-	    <h1>Lock</h1>
+	    <h1>LOCK</h1>
 	    <p>self-destructing messages</p>
-	    <form action="/new" method="POST">
-	        <textarea name="message" placeholder="Message..."></textarea>
+	    <form action="/new" method="POST" name="form" onsubmit="return check()">
+	        <textarea name="message" placeholder="Message..." id="message"></textarea>
 	        <input type="submit" value="Lock"/>
 	    </form>
 	</div>
+	<script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
