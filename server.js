@@ -34,6 +34,7 @@ app.get("/:key", function(req, res) {
    storage.getLock(key).then(function(lock) {
       if(!lock) {
           notFound(res);
+          log("404 Not Found", "yellow")
       } else {
           var html = view.renderDel(lock.message);
           res.send(html);
