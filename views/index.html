@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Del</title>
-	<link rel="stylesheet" href="./public/css/styles.css"/>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lock</title>
+
+    <link href="./css/lib/wing.min.css" rel="stylesheet" type="text/css" />
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
-    <div class="notFooter">
-    <div class="centered text-center animate fadeIn contain">
-<h1>Del</h1>
-<p>Send a self-destructing message</p>
-<form action="/del" method="POST">
-   <textarea type="text" name="mes" placeholder="Message to Del" autocomplete="off"></textarea>
-   <br/>
-    <button class="btn btn-outline">Del</button>
-</form>
-</div>
-</div>
-<footer id="footer" class="text-center">
-        Made with <span id="heart" class="animate pulse">&#9825;</span> By <a href="http://kingpixil.github.io/Me" target="_blank">Kabir</a>
-</footer>
-</div>
-<script src="./public/js/lib/paint.min.js"></script>
-<script src="./public/js/scripts.js"></script>
+	<div class="centered text-center">
+	    <h1>Lock</h1>
+	    <p>self-destructing messages</p>
+	    <form action="/new" method="POST">
+	        <textarea name="message" placeholder="Message..."></textarea>
+	        <input type="submit" value="Lock"/>
+	    </form>
+	</div>
 </body>
 </html>

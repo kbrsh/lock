@@ -1,0 +1,16 @@
+body {
+    
+}
+
+#count {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+
+.center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}

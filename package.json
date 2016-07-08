@@ -1,15 +1,15 @@
 {
-  "name": "del",
-  "version": "1.0.0",
+  "name": "lock",
+  "version": "0.0.0",
   "description": "Self Destructing Messages",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo 'No Test Yet'",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "KingPixil/del"
+    "url": "KingPixil/lock"
   },
   "author": "Kabir Shah",
   "license": "MIT",

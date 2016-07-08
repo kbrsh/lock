@@ -1,4 +1,4 @@
-# Del
+# Lock
 
 Simple Self-Destructing Messages
 
