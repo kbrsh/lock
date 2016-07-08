@@ -4,8 +4,6 @@ var bodyParser = require('body-parser');
 var color = require('./extra/color');
 var view = require('./src/view');
 
-//var BASE_URL = 'https://delit.herokuapp.com/';
-//var BASE_URL = 'http://lol-flosfad.c9users.io/';
 function randomStr(s) {
     return Math.round((Math.pow(36, s + 1) - Math.random() * Math.pow(36, s))).toString(36).slice(1);
 }
@@ -14,8 +12,6 @@ function log(s, c) {
     console.log(color[c](s));
 }
 
-
-var delMessages = {};
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/views/public'));
@@ -27,6 +23,11 @@ app.get("/", function(req, res) {
 
 app.post("/new", function(req, res) {
    res.send(req.body.message);
+});
+
+app.get("/:key", function(req, res) {
+   var key = req.params["key"];
+   res.send(key);
 });
 
 

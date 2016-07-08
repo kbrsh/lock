@@ -15,7 +15,9 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.1",
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "sequelize": "^3.23.4",
+    "sqlite3": "^3.1.4"
   },
   "devDependencies": {
     "nodemon": "latest"
