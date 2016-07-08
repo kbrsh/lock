@@ -17,6 +17,7 @@ small a {
     font-family: 'Quicksand';
     text-decoration: none;
     color: #FFFFF3;
+    transition: all .2s ease;
 }
 
 small a:hover {
