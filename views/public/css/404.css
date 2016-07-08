@@ -1,6 +1,19 @@
-.center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
+body {
+    color: #FFFFF3;
+    background: #FF4365;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-size: 7rem;
+}
+
+p {
+    font-family: 'Quicksand';
+    font-size: 2rem;
+}
+
+small a {
+    text-decoration: none;
+    color: #FFFFF3;
 }

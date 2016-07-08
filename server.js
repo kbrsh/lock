@@ -22,7 +22,7 @@ app.get("/", function(req, res) {
 });
 
 app.post("/new", function(req, res) {
-   res.send(req.body.message);
+   
 });
 
 app.get("/:key", function(req, res) {
