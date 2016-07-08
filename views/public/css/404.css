@@ -14,6 +14,11 @@ p {
 }
 
 small a {
+    font-family: 'Quicksand';
     text-decoration: none;
     color: #FFFFF3;
+}
+
+small a:hover {
+    font-weight: bolder;
 }
