@@ -40,3 +40,7 @@ module.exports.addLock = (message) => gen().then(id => Lock.create({
     id: id,
     message: message
 }));
+
+module.exports.deleteLock = function(id) {
+    Lock.findById(id).then(lock => lock.destroy());
+}
