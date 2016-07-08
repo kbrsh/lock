@@ -22,8 +22,13 @@ var Lock = sequelize.define('Lock', {
 sequelize.sync();
 
 
-function randomStr(s) {
-    return Math.round((Math.pow(36, s + 1) - Math.random() * Math.pow(36, s))).toString(36).slice(1);
+function randomStr() {
+    return Math.round((Math.pow(36, 7 + 1) - Math.random() * Math.pow(36, 7))).toString(36).slice(1);
+}
+
+function gen(id) {
+    var id = randomStr();
+    return Lock.findById(id).then(result => result ? gen() : id);
 }
 
 
@@ -31,8 +36,7 @@ module.exports.getLock = function(id) {
     return Lock.findById(id);
 }
 
-module.exports.addLock = (title, content) => randomStr().then(id => Lock.create({
+module.exports.addLock = (message) => gen().then(id => Lock.create({
     id: id,
-    title: title,
-    content: content
+    message: message
 }));

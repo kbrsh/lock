@@ -22,8 +22,9 @@ app.get("/", function(req, res) {
 });
 
 app.post("/new", function(req, res) {
-    var showNew = lock => res.send(view.renderNew(lock.message));
-    storage.addLog(req.body.message).then(showNew);
+    var showNew = lock => res.send(view.renderNew(lock.id));
+    storage.addLock(req.body.message).then(showNew);
+    log("User posted to /new", "green");
 });
 
 app.get("/:key", function(req, res) {
