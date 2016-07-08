@@ -31,6 +31,15 @@ app.post("/new", function(req, res) {
 app.get("/:key", function(req, res) {
    var key = req.params["key"];
    res.set('Content-Type', 'text/html');
+   storage.getLock(key).then(function(lock) {
+      if(!lock) {
+          notFound(res);
+      } else {
+          var html = view.renderDel(lock.message);
+          res.send(html);
+          log("User visited /" + key, "green");
+      }
+   });
 });
 
 
