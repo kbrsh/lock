@@ -30,7 +30,7 @@ app.post("/new", function(req, res) {
 
 app.get("/:key", function(req, res) {
    var key = req.params["key"];
-   if storage.getLog(key)
+   res.set('Content-Type', 'text/html');
 });
 
 
