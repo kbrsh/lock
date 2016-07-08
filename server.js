@@ -22,14 +22,15 @@ app.get("/", function(req, res) {
 });
 
 app.post("/new", function(req, res) {
-    var showNew = lock => res.send(view.renderNew(lock.id));
+    res.set('Content-Type', 'text/html');
+    var showNew = lock => res.send(view.renderNew(req.headers.host + "/" + lock.id));
     storage.addLock(req.body.message).then(showNew);
     log("User posted to /new", "green");
 });
 
 app.get("/:key", function(req, res) {
    var key = req.params["key"];
-   res.send(key);
+   if storage.getLog(key)
 });
 
 

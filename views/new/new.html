@@ -15,7 +15,7 @@
 	<div class="centered">
 	    <h3>Your Lock is Ready.</h3>
 	    <h5>Share the URL with someone.</h5>
-	    <input type="text" value="{{link}}" readonly/>
+	    <input type="text" onClick="this.setSelectionRange(0, this.value.length)" value="{{link}}" readonly/>
 	</div>
 </body>
 </html>
