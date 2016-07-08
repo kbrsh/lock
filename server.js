@@ -38,6 +38,9 @@ app.get("/:key", function(req, res) {
       } else {
           var html = view.renderDel(lock.message);
           res.send(html);
+          setTimeout(function() {
+              storage.deleteLock(key);
+          }, 5000);
           log("User visited /" + key, "green");
       }
    });
