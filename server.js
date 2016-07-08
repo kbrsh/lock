@@ -34,12 +34,13 @@ app.get("/:key", function(req, res) {
    storage.getLock(key).then(function(lock) {
       if(!lock) {
           notFound(res);
-          log("404 Not Found", "yellow")
+          log("404 Not Found", "yellow");
       } else {
           var html = view.renderDel(lock.message);
           res.send(html);
           setTimeout(function() {
               storage.deleteLock(key);
+              log("Message Deleted!", "green");
           }, 5000);
           log("User visited /" + key, "green");
       }
