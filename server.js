@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var color = require('./extra/color');
 var view = require('./src/view');
+var storage = require('./src/storage');
 
 function log(s, c) {
     console.log(color[c](s));
@@ -21,7 +22,8 @@ app.get("/", function(req, res) {
 });
 
 app.post("/new", function(req, res) {
-   res.send(view.renderNew(req.body.message))
+    var showNew = lock => res.send(view.renderNew(lock.message));
+    storage.addLog(req.body.message).then(showNew);
 });
 
 app.get("/:key", function(req, res) {
