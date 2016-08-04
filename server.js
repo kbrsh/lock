@@ -47,6 +47,20 @@ app.get("/:key", function(req, res) {
    });
 });
 
+app.get("/lock/submit", function(req, res) {
+    var apiMessage = req.query.message;
+    res.header('Content-Type', 'application/json');
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    
+    var sendApiResponse = lock => {
+        res.send(JSON.stringify({url: req.protocol + '://' + req.hostname + "/" + lock.id, message: lock.message}));
+    };
+    
+    storage.addLock(apiMessage).then(sendApiResponse);
+    log("[LOCK] Creating Lock via API", "green");
+});
+
 
 app.listen(process.env.PORT, function (req, res) {
     log("Listening", "blue");
