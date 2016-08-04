@@ -14,7 +14,7 @@ function notFound(res) {
 }
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname + '/views/public'));
+app.use(express.static(__dirname + '/assets'));
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + '/views/index.html');
