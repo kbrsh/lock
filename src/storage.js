@@ -15,7 +15,7 @@ var sequelize = new Sequelize('database', 'username', 'password', {
 
 
 var Lock = sequelize.define('Lock', {
-    id: { type: Sequelize.STRING(7), unique: true, primaryKey: true },
+    id: { type: Sequelize.STRING(15), unique: true, primaryKey: true },
     message: Sequelize.TEXT
 });
 
@@ -23,7 +23,7 @@ sequelize.sync();
 
 
 function randomStr() {
-    return Math.round((Math.pow(36, 7 + 1) - Math.random() * Math.pow(36, 7))).toString(36).slice(1);
+    return Math.round((Math.pow(36, 15 + 1) - Math.random() * Math.pow(36, 15))).toString(36).slice(1);
 }
 
 function gen(id) {
