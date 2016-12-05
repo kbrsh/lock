@@ -1,3 +1,3 @@
 # Lock
 
-Simple Self-Destructing Messages
+Self-Destructing Messages
